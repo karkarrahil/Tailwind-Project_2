@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailWind_Project_2</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            font-family: 'Qwitcher Grypen', cursive;
+            font-weight: bolder !important;
+        }
+    </style>
+    <script>
+    
+        
+        
+        function Menu() {
+            let show = document.getElementById("show")
+            let icon = document.getElementById('icon')
+            icon.setAttribute('class', 'fa-solid fa-xmark mx-2')
+            if (show.getAttribute('class') === 'hidden') {
+                show.setAttribute('class', 'block')
+            }
+            else {
+                show.setAttribute('class', 'hidden')
+                icon.setAttribute('class', 'fa-solid fa-bars mx-2')
+            }
+        }
+    </script>
+</head>
+
+<body class="body">
+    <nav class="navbar">
+        <div class="logo">
+            <h1 class="text-5xl font-bold mx-4 my-4">John Doe...</h1>
+        </div>
+        <div class="bar flex justify-between border border-gray-300 p-3 mx-2 md:hidden">
+            <h3 class="text-sm font-bold mx-3">MENU</h3>
+            <button onclick="Menu()"><i class="fa-solid fa-bars mx-2" id="icon"></i></button>
+        </div>
+        <div class="hidden md:block" id="show">
+            <ul class="flex flex-col justify-center items-center  md:flex-row">
+                <li class="border  w-5/6 text-center border-b-gray-300 p-3 mx-2 hover:bg-black hover:text-white cursor-pointer transition duration-200">HOME</li>
+                <li class="border  w-5/6 text-center border-b-gray-300 p-3 mx-2 hover:bg-black hover:text-white cursor-pointer transition duration-200">COACHING</li>
+                <li class="border  w-5/6 text-center border-b-gray-300 p-3 mx-2 hover:bg-black hover:text-white cursor-pointer transition duration-200">ABOUT ME</li>
+                <li class="border  w-5/6 text-center border-b-gray-300 p-3 mx-2 hover:bg-black hover:text-white cursor-pointer transition duration-200">ARTICAL</li>
+                <li class="border  w-5/6 text-center border-b-gray-300 p-3 mx-2 hover:bg-black hover:text-white cursor-pointer transition duration-200">PAGES</li>
+                <li class="border  w-5/6 text-center border-b-gray-300 p-3 mx-2 hover:bg-black hover:text-white cursor-pointer transition duration-200">ASK ME</li>
+            </ul>
+        </div>
+    </nav>
+    <!-- carousel section  -->
+    <div id="controls-carousel" class="relative my-4" data-carousel="static">
+        <!-- Carousel wrapper -->
+        <div class="relative h-40 overflow-hidden md:h-96">
+            <!-- Item 1 -->
+            <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10"
+                data-carousel-item="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmBIgYj1yY-r7Fh2ZwHmaAfq8tGJTXxy5pEg&usqp=CAU"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
+                data-carousel-item="active">
+                <img src="https://www.readree.com/wp-content/uploads/2021/01/Search-Engines-That-Search-for-Duplicate-images.jpg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 3 -->
+            <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
+                data-carousel-item="">
+                <img src="/docs/images/carousel/carousel-3.svg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out absolute inset-0 transition-all transform"
+                data-carousel-item="">
+                <img src="/docs/images/carousel/carousel-4.svg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out absolute inset-0 transition-all transform"
+                data-carousel-item="">
+                <img src="/docs/images/carousel/carousel-5.svg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev="">
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next="">
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+    <!-- image and other  -->
+    <div class="main mt-12 md:grid md:grid-cols-2 lg:grid-cols-3">
+        <div class="first mx-4 ">
+
+            <div class="m-auto">
+                <img src="images/coach_service_img_1.jpg" alt="#" class=" mt-8 m-auto sm:w-5/6">
+            </div>
+            <div class="text mx-4 mt-6 sm:text-center md:w-auto">
+                <p class="text-red-500 font-bold text-sm sm:text-lg ">LIFE COACHING</p>
+                <h2 class="text-2xl font-bold w-72 sm:w-8/12 sm:m-auto">Evary Sinngle incredible Achiever Have a Coach
+                </h2>
+            </div>
+        </div>
+        <div class="first mx-8 ">
+
+            <div class="m-auto">
+                <img src="images/coach_service_img_3.jpg" alt="#" class=" mt-8 m-auto sm:w-5/6">
+            </div>
+            <div class="text mx-4 mt-6 sm:text-center md:w-auto">
+                <p class="text-green-600 font-bold text-sm sm:text-lg ">LEADERSHIP</p>
+                <h2 class="text-2xl font-bold w-80 sm:w-8/12 sm:m-auto md:w-auto">Being A Leader With Clear Vision &
+                    Guide Their Team</h2>
+            </div>
+        </div>
+        <div class="first mx-8 ">
+
+            <div class="m-auto">
+                <img src="images/coach_service_img_2.jpg" alt="#" class=" mt-8 m-auto sm:w-5/6">
+            </div>
+            <div class="text mx-4 mt-6 sm:text-center md:w-auto">
+                <p class="text-yellow-600 font-bold text-sm sm:text-lg ">RELATIONSHIP</p>
+                <h2 class="text-2xl font-bold w-72 sm:w-8/12 sm:m-auto">Make A Healthy Relationship You Deserve</h2>
+            </div>
+        </div>
+
+    </div>
+    <!-- brand section  -->
+    <div id="brand" class="bg-sky-100 xl:flex lg:flex md:flex sm:grid sm:grid-cols-1 p-4 my-12 items-center grid">
+        <div class="text  text-justify sm:order-2 lg:order-1 order-2">
+            <h1 class="italic text-6xl my-4">john Doe</h1>
+            <p class="text-2xl italic text">Achieve your personal goals with life coaching.
+
+            </p>
+            <p class="text-lg my-5 text-gray-600">John Doe is entrepreneur, best-selling author, philanthropist and the nation’s #1 Life and Business
+                Strategist, and redentialed Life Coach and Spiritual Counselor with over a decade of experience. For
+                more information, please view my bio page using below link.</p>
+            <div id="btn" class="flex items-center space-x-3 my-4">
+                <button class="p-4 rounded-md bg-red-500 text-white font-bold hover:bg-red-400">More About John</button>
+                <a href="#" class="text-lg underline hover:text-sky-500 transition duration-150">View all my books</a>
+            </div>
+        </div>
+        <div class="right w-full sm:order-1 lg:order-2 order-1">
+
+            <div class="image w-full h-full ">
+                <img src="images/profile_img.jpg" alt="#" class="w-3/4 m-auto rounded-lg" >
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    
+</body>
+
+</html>
